@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="logo">
+  </header>
+
+  <main class="container">
+    <div>
+      <h5>Bill</h5>
+      <input type="text" placeholder="$">
+    </div>
+    <div class="x">
+      <div>
+        <p>Select Tip %</p>
+        <div class="percent">
+          <p>5%</p>
+          <p>10%</p>
+          <p>15%</p>
+          <p>25%</p>
+          <p>50%</p>
+          <p>Custom</p>
+        </div>       
+      </div>
+      
+      <div>
+        <p>Number of People</p>
+        <input type="text">
+      </div>
+      
+    </div>
+
+    <div class="amount">
+      <div>
+        <h5>Tip Amount</h5>
+        <p>/ person</p>
+        <div>
+          <p>$0.00</p>
+        </div>        
+      </div>
+
+      <div>
+        <h5>Total</h5>
+        <p>/ person</p>
+        <div>
+          <p>$0.00</p>
+        </div>
+      </div>
+
+      <button> Reset</button>
+    </div>   
+
+
+    <div class="footer">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="./node_modules/lodash/lodash.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
