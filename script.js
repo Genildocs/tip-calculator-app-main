@@ -14,7 +14,7 @@ function ShowDisplayError(){
 }
 
 
-_.forEach(porcentTip, (value)=>{
+porcentTip.forEach((value)=>{
     value.addEventListener('click', (e)=>{
         e.preventDefault();
         tipAmount(value.textContent);
