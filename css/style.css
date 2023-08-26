@@ -110,6 +110,11 @@ body {
 .section-1 .percentage-select {
   font-size: 2rem;
 }
+@media (max-width: 500px) {
+  .section-1 .percentage-select {
+    font-size: 1.5rem;
+  }
+}
 .section-1 .percentage-number {
   list-style: none;
   display: grid;
@@ -171,6 +176,11 @@ body {
 
 .cnt-title {
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .cnt-title {
+    font-size: 1.5rem;
+  }
 }
 .cnt-img {
   height: 2.5rem;
