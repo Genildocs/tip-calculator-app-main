@@ -1,0 +1,64 @@
+.cnt{
+
+  &-title{
+    font-size: 2rem;
+  }
+  &-img{
+    height: 2.5rem;
+  }
+  &-wrapper{
+    background-color: var(--light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover{
+      border: 1.5px solid var(--strong-cyan);
+    }
+  }
+
+  &-input{
+    background-color: transparent;
+    border: none;
+    padding-right: 1rem;
+    color: var(--very-dark-cyan);
+    font-size: 2.4rem;
+    font-family: inherit;
+    text-align: end;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.btn{
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-family: inherit;
+  transition: all 0.5s;
+
+  &:hover{
+    background-color: rgba(170, 196, 163, 0.5);
+  }
+
+  &:active{
+    background-color: var(--strong-cyan);
+  }
+}
+
+#value-amount{
+  font-size: 2.4rem;
+}
+
+#value-total{
+  font-size: 2.4rem;
+}

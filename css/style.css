@@ -1,3 +1,15 @@
+:root {
+  /*Color primary*/
+  --strong-cyan: hsl(172, 67%, 45%);
+  /*Neutral*/
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
 *,
 *::after,
 *::before {
@@ -9,14 +21,163 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 320px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
+  background-color: var(--light-grayish-cyan);
   font-family: "Space Mono", monospace;
+  font-weight: 700;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.container {
+  background-color: var(--white);
+  border-radius: 5px;
+  padding: 3rem;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 76rem;
+}
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.header {
+  transform: translateY(-50px);
+}
+
+.section-2 .amount {
+  background-color: var(--very-dark-cyan);
+  padding: 2rem;
+  border-radius: 5px;
+  height: 100%;
+  color: var(--white);
+}
+.section-2 .amount h5 {
+  font-size: 1.5rem;
+  color: var(--white);
+}
+.section-2 .amount p {
+  font-size: 1.1rem;
+}
+.section-2 .amount-tip {
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 10rem;
+}
+@media (max-width: 500px) {
+  .section-2 .amount-tip {
+    justify-content: space-between;
+  }
+}
+.section-2 .amount-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-bottom: 10rem;
+}
+.section-2 .value {
+  align-self: center;
+}
+
+.section-1 .percentage {
+  margin: 4rem 0;
+}
+.section-1 .percentage-select {
+  font-size: 2rem;
+}
+.section-1 .percentage-number {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 10rem));
+  grid-gap: 2rem;
+}
+.section-1 .percentage-number li {
+  background-color: var(--very-dark-cyan);
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+.section-1 .percentage-number li:hover {
+  background-color: var(--strong-cyan);
+}
+.section-1 .percentage-number li:active {
+  background-color: var(--very-dark-cyan);
+}
+.section-1 .percentage-number li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 1rem 5rem;
+}
+
+.cnt-title {
+  font-size: 2rem;
+}
+.cnt-img {
+  height: 2.5rem;
+}
+.cnt-wrapper {
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cnt-wrapper:hover {
+  border: 1.5px solid var(--strong-cyan);
+}
+.cnt-input {
+  background-color: transparent;
+  border: none;
+  padding-right: 1rem;
+  color: var(--very-dark-cyan);
+  font-size: 2.4rem;
+  font-family: inherit;
+  text-align: end;
+  cursor: pointer;
+}
+.cnt-input:focus-visible {
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--strong-cyan);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-family: inherit;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background-color: rgba(170, 196, 163, 0.5);
+}
+.btn:active {
+  background-color: var(--strong-cyan);
+}
+
+#value-amount {
+  font-size: 2.4rem;
+}
+
+#value-total {
+  font-size: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

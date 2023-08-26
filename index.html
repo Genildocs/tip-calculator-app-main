@@ -13,55 +13,68 @@
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <img src="./images/logo.svg" alt="logo">
   </header>
 
   <main class="container">
-    <div>
-      <h5>Bill</h5>
-      <input type="text" placeholder="$">
-    </div>
-    <div class="x">
-      <div>
-        <p>Select Tip %</p>
-        <div class="percent">
-          <p>5%</p>
-          <p>10%</p>
-          <p>15%</p>
-          <p>25%</p>
-          <p>50%</p>
-          <p>Custom</p>
-        </div>       
-      </div>
-      
-      <div>
-        <p>Number of People</p>
-        <input type="text">
-      </div>
-      
-    </div>
-
-    <div class="amount">
-      <div>
-        <h5>Tip Amount</h5>
-        <p>/ person</p>
-        <div>
-          <p>$0.00</p>
-        </div>        
-      </div>
-
-      <div>
-        <h5>Total</h5>
-        <p>/ person</p>
-        <div>
-          <p>$0.00</p>
+    <div class="section-1">
+      <div class="cnt price">
+        <h5 class="cnt-title price-title">Bill</h5>
+        <div class="cnt-wrapper">
+          <img src="./images/icon-dollar.svg" class="cnt-img">
+          <input type="text" id="price-input" class="cnt-input">
         </div>
+
       </div>
 
-      <button> Reset</button>
-    </div>   
+      <div class="percentage">
+          <h5 class="percentage-select">Select Tip %</h5>
+          <ul class="percentage-number">
+            <li><a href="#" class="porcent">5%</a></li>
+            <li><a href="#" class="porcent">10%</a></li>
+            <li><a href="#" class="porcent">15%</a></li>
+            <li><a href="#" class="porcent">25%</a></li>
+            <li><a href="#" class="porcent">50%</a></li>
+            <li><a href="#">Custom</a></li>
+          </ul>
+      </div>
 
+      <div class="people">
+         <h5 class="number-people cnt-title">Number of People</h5>
+        <div class="cnt-wrapper">
+          <img src="./images/icon-person.svg" class="cnt-img">
+          <input type="text" id="number-people" class="cnt-input">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section-2">
+      <div class="amount">
+        <div class="amount-tip">
+          <div>
+            <h5>Tip Amount</h5>
+            <p>/ person</p>
+          </div>
+          <div class="value">
+            <p id="value-amount">$0.00</p>
+          </div>
+        </div>
+
+        <div class="amount-total">
+          <div>
+            <h5>Total </h5>
+            <p>/ person</p>
+          </div>
+          <div class="value">
+            <p id="value-total">$0.00</p>
+          </div>
+        </div>
+        <button class="btn"> Reset</button>
+      </div>
+    </div>
+    </main>
 
     <div class="footer">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

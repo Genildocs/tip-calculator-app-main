@@ -1,3 +1,15 @@
+:root{
+    /*Color primary*/
+    --strong-cyan: hsl(172, 67%, 45%);
+    /*Neutral*/
+    --very-dark-cyan: hsl(183, 100%, 15%);
+    --dark-grayish-cyan: hsl(186, 14%, 43%);
+    --grayish-cyan: hsl(184, 14%, 56%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
 *,
 *::after,
 *::before{
@@ -8,10 +20,16 @@
 
 html{
     font-size: 62.5%;
+
+    @media(max-width: 320px){
+        font-size: 50%;
+    }
 }
 
 body{
+    background-color: var(--light-grayish-cyan);
     font-family: 'Space Mono', monospace;
+    font-weight: 700;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
