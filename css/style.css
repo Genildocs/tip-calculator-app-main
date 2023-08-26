@@ -87,8 +87,11 @@ body {
   gap: 10rem;
   margin-bottom: 10rem;
 }
+.section-2 .amount-total .value {
+  flex-basis: 35%;
+}
 .section-2 .value {
-  align-self: center;
+  flex-basis: 50%;
 }
 
 .section-1 .percentage {
@@ -121,6 +124,34 @@ body {
   font-size: 1.5rem;
   color: var(--white);
   padding: 1rem 5rem;
+}
+.section-1 .percentage-number .custom {
+  background-color: var(--light-grayish-cyan);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.section-1 .percentage-number .custom:hover {
+  background-color: var(--strong-cyan);
+}
+.section-1 .percentage-number .custom:active {
+  background-color: var(--light-grayish-cyan);
+}
+.section-1 .percentage-number .custom #custom {
+  width: 55%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: end;
+  cursor: pointer;
+}
+.section-1 .percentage-number .custom #custom::placeholder {
+  color: var(--white);
+}
+.section-1 .percentage-number .custom #custom:focus-visible {
+  outline: none;
 }
 
 .cnt-title {
@@ -178,6 +209,21 @@ body {
 
 #value-total {
   font-size: 2.4rem;
+}
+
+.erro-message, .erro-people {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-align: end;
+}
+
+.off {
+  display: none;
+}
+
+.visible {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

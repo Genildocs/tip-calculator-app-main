@@ -1,7 +1,12 @@
 const inputBill = document.getElementById('price-input');
 const inputNumberPeople = document.getElementById('number-people');
+const btn = document.querySelector('.btn')
 const valueAmount = document.getElementById('value-amount');
+const totalPerson = document.getElementById('value-total');
 const porcentTip = document.querySelectorAll('.porcent');
+const erro = document.querySelector('.off');
+const erroPeople = document.querySelector('.visible')
+
 
 _.forEach(porcentTip, (value)=>{
     value.addEventListener('click', (e)=>{
@@ -9,38 +14,51 @@ _.forEach(porcentTip, (value)=>{
         tipAmount(value.textContent);
     })
 })
-function messageError(){
-    const messageError = document.createElement('p');
-    messageError.classList.add('erro-message');
-    messageError.textContent = "Cannot be zero or letter"
-    const nPeople = document.querySelector('.people');
-    nPeople.appendChild(messageError);
-    messageError.style.color = "red";
-    messageError.style.fontSize = '1.2rem'
+function ShowDisplayError(){
+    erro.classList.remove('off');
+    erroPeople.classList.remove('visible');
 }
+
 function validatePeopleInput(){
     const people = Number(inputNumberPeople.value);
     if(isNaN(people) || people === 0){
-        messageError();
-    }else {
-        return people
+        ShowDisplayError()
+    }
+}
+
+function validaBillInput(){
+    const billValue = Number(inputBill.value);
+    if(isNaN(billValue) || billValue === 0){
+        ShowDisplayError()
     }
 }
 
 
 function tipAmount(porcent){
-    const billValue = Number(inputBill.value);
     const porcentValue = parseInt(porcent);
-    calcAmount(billValue, porcentValue );
+    calcAmount(porcentValue );
 }
 
-function calcAmount(bill, porcent){
-    const totalAmount = (bill * (porcent / 100)) / validatePeopleInput();
-    valueAmount.textContent = `$ ${totalAmount.toFixed(2)}`;
+function calcAmount(porcent){
+    const totalAmount = (Number(inputBill.value) * (porcent / 100)) / Number(inputNumberPeople.value);
+    validaBillInput();
+    validatePeopleInput();
+    total(totalAmount);
+    valueAmount.textContent = `$${totalAmount.toFixed(2)}`;
 }
 
-
-function total(){
-
+function total(totAmount){
+    const calcTotal = Number(inputBill.value) / Number(inputNumberPeople.value) + totAmount;
+    totalPerson.textContent = `$${calcTotal.toFixed(2)}`;
 }
 
+btn.addEventListener('click', ()=>{
+    const existinMessage = document.querySelector('.erro-message');
+    inputBill.value= "";
+    inputNumberPeople.value = "";
+    valueAmount.textContent = '$0.00';
+    totalPerson.textContent = '$0.00';
+    erro.classList.add('off')
+    erroPeople.classList.add('visible');
+
+})

@@ -49,11 +49,15 @@
       justify-content: space-between;
       gap: 10rem;
       margin-bottom: 10rem;
+
+      .value{
+        flex-basis: 35%;
+      }
     }
   }
 
   .value{
-    align-self: center;
+    flex-basis: 50%;
   }
 
 }
@@ -95,8 +99,45 @@
             padding: 1rem 5rem;
 
           }
+
+        }
+
+        .custom{
+          background-color: var(--light-grayish-cyan);
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          transition: all 0.5s;
+
+          &:hover{
+            background-color: var(--strong-cyan);
+          }
+
+          &:active{
+            background-color: var(--light-grayish-cyan);
+          }
+
+          #custom{
+            width: 55%;
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            font-size: 1.5rem;
+            text-align: end;
+            cursor: pointer;
+
+            &::placeholder{
+              color: var(--white);
+            }
+
+            &:focus-visible {
+              outline: none;
+            }
+
+          }
         }
       }
   }
+
 
 }

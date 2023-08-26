@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Frontend Mentor | Tip calculator app</title>
-</head>
+  <body>
+    <header class="header">
+      <img src="./images/logo.svg" alt="logo" />
+    </header>
 
-<body>
-  <header class="header">
-    <img src="./images/logo.svg" alt="logo">
-  </header>
-
-  <main class="container">
-    <div class="section-1">
-      <div class="cnt price">
-        <h5 class="cnt-title price-title">Bill</h5>
-        <div class="cnt-wrapper">
-          <img src="./images/icon-dollar.svg" class="cnt-img">
-          <input type="text" id="price-input" class="cnt-input">
+    <main class="container">
+      <div class="section-1">
+        <div class="cnt price">
+          <h5 class="cnt-title price-title">Bill</h5>
+          <div class="cnt-wrapper">
+            <img src="./images/icon-dollar.svg" class="cnt-img" />
+            <input type="text" id="price-input" class="cnt-input" />
+          </div>
+          <p class="erro-message off">Cannot be zero or letter</p>
         </div>
 
-      </div>
-
-      <div class="percentage">
+        <div class="percentage">
           <h5 class="percentage-select">Select Tip %</h5>
           <ul class="percentage-number">
             <li><a href="#" class="porcent">5%</a></li>
@@ -36,53 +43,57 @@
             <li><a href="#" class="porcent">15%</a></li>
             <li><a href="#" class="porcent">25%</a></li>
             <li><a href="#" class="porcent">50%</a></li>
-            <li><a href="#">Custom</a></li>
+            <div class="custom">
+              <input type="text" placeholder="Custom" id="custom">
+            </div>
+
           </ul>
-      </div>
-
-      <div class="people">
-         <h5 class="number-people cnt-title">Number of People</h5>
-        <div class="cnt-wrapper">
-          <img src="./images/icon-person.svg" class="cnt-img">
-          <input type="text" id="number-people" class="cnt-input">
         </div>
 
-      </div>
-    </div>
-
-    <div class="section-2">
-      <div class="amount">
-        <div class="amount-tip">
-          <div>
-            <h5>Tip Amount</h5>
-            <p>/ person</p>
+        <div class="people">
+          <h5 class="number-people cnt-title">Number of People</h5>
+          <div class="cnt-wrapper">
+            <img src="./images/icon-person.svg" class="cnt-img" />
+            <input type="text" id="number-people" class="cnt-input" />
           </div>
-          <div class="value">
-            <p id="value-amount">$0.00</p>
-          </div>
+          <p class="erro-people visible">Cannot be zero or letter</p>
         </div>
-
-        <div class="amount-total">
-          <div>
-            <h5>Total </h5>
-            <p>/ person</p>
-          </div>
-          <div class="value">
-            <p id="value-total">$0.00</p>
-          </div>
-        </div>
-        <button class="btn"> Reset</button>
       </div>
-    </div>
+
+      <div class="section-2">
+        <div class="amount">
+          <div class="amount-tip">
+            <div>
+              <h5>Tip Amount</h5>
+              <p>/ person</p>
+            </div>
+            <div class="value">
+              <p id="value-amount">$0.00</p>
+            </div>
+          </div>
+
+          <div class="amount-total">
+            <div>
+              <h5>Total</h5>
+              <p>/ person</p>
+            </div>
+            <div class="value">
+              <p id="value-total">$0.00</p>
+            </div>
+          </div>
+          <button class="btn">Reset</button>
+        </div>
+      </div>
     </main>
 
     <div class="footer">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
     </div>
 
     <script src="./node_modules/lodash/lodash.js"></script>
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>

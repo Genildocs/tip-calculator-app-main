@@ -62,3 +62,18 @@
 #value-total{
   font-size: 2.4rem;
 }
+
+.erro-message, .erro-people{
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  text-align: end;
+}
+
+.off{
+  display: none;
+}
+
+.visible{
+  display: none;
+}
