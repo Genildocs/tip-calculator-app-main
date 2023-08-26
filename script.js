@@ -4,8 +4,14 @@ const btn = document.querySelector('.btn')
 const valueAmount = document.getElementById('value-amount');
 const totalPerson = document.getElementById('value-total');
 const porcentTip = document.querySelectorAll('.porcent');
+
+/*Erro*/
 const erro = document.querySelector('.off');
 const erroPeople = document.querySelector('.visible')
+function ShowDisplayError(){
+    erro.classList.remove('off');
+    erroPeople.classList.remove('visible');
+}
 
 
 _.forEach(porcentTip, (value)=>{
@@ -14,11 +20,8 @@ _.forEach(porcentTip, (value)=>{
         tipAmount(value.textContent);
     })
 })
-function ShowDisplayError(){
-    erro.classList.remove('off');
-    erroPeople.classList.remove('visible');
-}
 
+/*Validation*/
 function validatePeopleInput(){
     const people = Number(inputNumberPeople.value);
     if(isNaN(people) || people === 0){
@@ -33,7 +36,7 @@ function validaBillInput(){
     }
 }
 
-
+/*Calc*/
 function tipAmount(porcent){
     const porcentValue = parseInt(porcent);
     calcAmount(porcentValue );
@@ -52,8 +55,8 @@ function total(totAmount){
     totalPerson.textContent = `$${calcTotal.toFixed(2)}`;
 }
 
+/*Reset*/
 btn.addEventListener('click', ()=>{
-    const existinMessage = document.querySelector('.erro-message');
     inputBill.value= "";
     inputNumberPeople.value = "";
     valueAmount.textContent = '$0.00';
